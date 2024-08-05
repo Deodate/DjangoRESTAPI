@@ -1,4 +1,4 @@
-# DJANGO REST API
+# DJANGO REST API          # COMPLETE PROJECT
 [0]. DJANGO REST API
 ![image](https://github.com/user-attachments/assets/db77e656-e62e-4c4e-8d9d-d191ff6d53f7)
 

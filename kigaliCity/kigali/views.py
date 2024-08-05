@@ -10,4 +10,9 @@ class KigaliViewset(APIView):
     def get(self, request, id=None):
         if id:
             item = models.kigali.objects.get(id=id)
-            serializer = serializers.Ki
+            serializer = serializers.KigaliSerializer(item)
+            return Response({"status", "data": serializer.data}, status=status.HTTP_200_OK)
+
+            items = models.Kigali.objects.all()
+            serializer = serializers.KigaliSerializer(items, many=True)
+            return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)

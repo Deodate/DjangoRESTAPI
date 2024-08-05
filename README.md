@@ -2,7 +2,7 @@
 [0]. DJANGO REST API
 ![image](https://github.com/user-attachments/assets/db77e656-e62e-4c4e-8d9d-d191ff6d53f7)
 
-
+[#]
 ![image](https://github.com/user-attachments/assets/26bc24f1-072c-4a1e-bd36-db793cb9cc06)
 
 [1]. API CALL

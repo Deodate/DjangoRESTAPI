@@ -5,3 +5,6 @@ urlpatterns = [
     path('kigali/', KigaliViewset.as_view()),
     path('kigali/<int:id>', KigaliViewset.as_view())
 ]
+
+
+

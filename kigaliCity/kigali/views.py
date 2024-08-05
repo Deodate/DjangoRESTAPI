@@ -16,3 +16,26 @@ class KigaliViewset(APIView):
             items = models.Kigali.objects.all()
             serializer = serializers.KigaliSerializer(items, many=True)
             return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+
+    def post(self, request):
+        serializer = serializers.KigaliSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+            else: 
+                return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+            def patch(self, request, id=None):
+                item = models.Kigali.objects.get(id=id)
+                serializer = serializers.KigaliSerializer(item, data=request.data, partial=True)
+                if serializer.is_valid():
+                    serializer.save()
+                    return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+                    else:
+                    return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+                    def delete(self, request, id=None):
+                        item = models.Kigali.objects.filter(id=id)
+                        print(item)
+                        item.delete()
+                        return Response({"status": "success", "data": "Item Delete"})
